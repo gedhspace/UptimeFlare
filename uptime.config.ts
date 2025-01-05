@@ -22,6 +22,24 @@ const workerConfig = {
       method: 'GET',
       target: 'https://hub.docker.com'
     },
+    {
+      id: 'temporary_email_backend',
+      name: 'Temporary email backend',
+      method: 'GET',
+      target: 'https://mail.gedh2011.us.kg'
+    },
+    {
+      id: 'temporary_email_front-end',
+      name: 'Temporary email front-end',
+      method: 'GET',
+      target: 'https://mail-server.gedh2011.us.kg'
+    },
+    {
+      id: 'magic1',
+      name: 'Magic1',
+      method: 'GET',
+      target: 'https://magic23.gdh2011.us.kg/90cd4a77-141a-43c9-991b-08263cfe9c10'
+    },
     
   ],
   notification: {
