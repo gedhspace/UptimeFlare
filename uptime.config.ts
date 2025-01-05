@@ -40,6 +40,18 @@ const workerConfig = {
       method: 'GET',
       target: 'https://magic23.gdh2011.us.kg/90cd4a77-141a-43c9-991b-08263cfe9c10'
     },
+    {
+      id: 'reverse_generation',
+      name: 'Reverse Generation',
+      method: 'GET',
+      target: 'ojproxy.738813115.workers.dev'
+    },
+    {
+      id: 'docker_images',
+      name: 'Docker Hub image',
+      method: 'GET',
+      target: 'https://docker-hub.gedh2011.us.kg'
+    },
     
   ],
   notification: {
