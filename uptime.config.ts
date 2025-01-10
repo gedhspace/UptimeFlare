@@ -44,7 +44,7 @@ const workerConfig = {
       id: 'reverse_generation',
       name: 'Reverse Generation',
       method: 'GET',
-      target: 'ojproxy.738813115.workers.dev'
+      target: 'https://ojproxy.gedh2011.us.kg'
     },
     {
       id: 'docker_images',
