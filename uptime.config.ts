@@ -38,7 +38,13 @@ const workerConfig = {
       id: 'magic1',
       name: 'Magic1',
       method: 'GET',
-      target: 'https://magic23.gdh2011.us.kg/90cd4a77-141a-43c9-991b-08263cfe9c10'
+      target: 'https://my2.gedh2011.us.kg/90cd4a77-141a-43c9-991b-08263cfe9c10'
+    },
+    {
+      id: 'magic2',
+      name: 'Magic2',
+      method: 'GET',
+      target: 'https://magic23.gedh2011.us.kg/90cd4a77-141a-43c9-991b-08263cfe9c10'
     },
     {
       id: 'reverse_generation',
