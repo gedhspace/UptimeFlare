@@ -36,13 +36,13 @@ const workerConfig = {
     },
     {
       id: 'magic1',
-      name: 'Magic1',
+      name: 'Magic1随机节点',
       method: 'GET',
       target: 'https://my2.gedh2011.us.kg/90cd4a77-141a-43c9-991b-08263cfe9c10'
     },
     {
       id: 'magic2',
-      name: 'Magic2',
+      name: 'Magic2优选节点',
       method: 'GET',
       target: 'https://magic23.gedh2011.us.kg/90cd4a77-141a-43c9-991b-08263cfe9c10'
     },
@@ -58,7 +58,12 @@ const workerConfig = {
       method: 'GET',
       target: 'https://docker-hub.gedh2011.us.kg'
     },
-    
+    {
+      id: 'bing',
+      name: 'Bing',
+      method: 'GET',
+      target: 'https://bing.gedh2011.us.kg'
+    },
   ],
   notification: {
     // [Optional] apprise API server URL
