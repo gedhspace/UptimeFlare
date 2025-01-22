@@ -70,6 +70,12 @@ const workerConfig = {
       method: 'GET',
       target: 'https://pan.gedh2011.us.kg'
     },
+    {
+      id: 'pastebin',
+      name: 'Pastebin',
+      method: 'GET',
+      target: 'https://files.gedh2011.us.kg'
+    },
   ],
   notification: {
     // [Optional] apprise API server URL
