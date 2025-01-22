@@ -11,7 +11,7 @@ const pageConfig = {
 
 const workerConfig = {
   // Write KV at most every 3 minutes unless the status changed
-  kvWriteCooldownMinutes: 3,
+  kvWriteCooldownMinutes: 2,
   // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`
   // passwordProtection: 'username:password',
   // Define all your monitors here
@@ -63,6 +63,12 @@ const workerConfig = {
       name: 'Bing',
       method: 'GET',
       target: 'https://bing.gedh2011.us.kg'
+    },
+    {
+      id: 'pan',
+      name: 'Pan',
+      method: 'GET',
+      target: 'https://pan.gedh2011.us.kg'
     },
   ],
   notification: {
