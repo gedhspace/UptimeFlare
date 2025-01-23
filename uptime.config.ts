@@ -11,7 +11,7 @@ const pageConfig = {
 
 const workerConfig = {
   // Write KV at most every 3 minutes unless the status changed
-  kvWriteCooldownMinutes: 2,
+  kvWriteCooldownMinutes: 3,
   // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`
   // passwordProtection: 'username:password',
   // Define all your monitors here
@@ -75,6 +75,12 @@ const workerConfig = {
       name: 'Pastebin',
       method: 'GET',
       target: 'https://files.gedh2011.us.kg'
+    },
+    {
+      id: 'mcserver',
+      name: 'Minecraft Server',
+      method: 'TCP_PING',
+      target: 'xm.rainplay.cn:32219'
     },
   ],
   notification: {
