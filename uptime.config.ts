@@ -80,7 +80,7 @@ const workerConfig = {
       id: 'mcserver',
       name: 'Minecraft Server',
       method: 'TCP_PING',
-      target: 'xm.rainplay.cn:32219'
+      target: 'xm.rainplay.cn'
     },
   ],
   notification: {
