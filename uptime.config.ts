@@ -76,12 +76,7 @@ const workerConfig = {
       method: 'GET',
       target: 'https://files.gedh2011.us.kg'
     },
-    {
-      id: 'mcserver',
-      name: 'Minecraft Server',
-      method: 'TCP_PING',
-      target: 'xm.rainplay.cn'
-    },
+    
   ],
   notification: {
     // [Optional] apprise API server URL
