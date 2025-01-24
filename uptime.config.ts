@@ -25,7 +25,7 @@ const workerConfig = {
     {
       id: 'temporary_email_backend',
       name: 'Temporary email backend',
-      method: 'TCP_PING',
+      method: 'GET',
       target: 'https://mail.gedh2011.us.kg'
     },
     {
