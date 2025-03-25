@@ -1,6 +1,6 @@
 const pageConfig = {
   // Title for your status page 
-  title: "Gedh's Status Page， 
+  title: "Gedh's Status Page,
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
     { link: 'https://github.com/gedhspace', label: 'GitHub' },
