@@ -1,11 +1,11 @@
 const pageConfig = {
   // Title for your status page
-  title: "lyc8503's Status Page",
+  title: "Gedh's Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
-    { link: 'https://blog.lyc8503.net/', label: 'Blog' },
-    { link: 'mailto:me@lyc8503.net', label: 'Email Me', highlight: true },
+    { link: 'https://github.com/gedhspace', label: 'GitHub' },
+    { link: 'https://space.bilibili.com/3494366867884831', label: 'BiliBili' },
+    { link: 'mailto:738813115@qq.com', label: 'Email Me', highlight: true },
   ],
 }
 
@@ -16,61 +16,92 @@ const workerConfig = {
   // passwordProtection: 'username:password',
   // Define all your monitors here
   monitors: [
-    // Example HTTP Monitor
-    {
-      // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
-      // `name` is used at status page and callback message
-      name: 'My API Monitor',
-      // `method` should be a valid HTTP Method
-      method: 'POST',
-      // `target` is a valid URL
-      target: 'https://example.com',
-      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a tooltip for this monitor',
-      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://example.com',
-      // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
-      hideLatencyChart: false,
-      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
-      expectedCodes: [200],
-      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
-      timeout: 10000,
-      // [OPTIONAL] headers to be sent
-      headers: {
-        'User-Agent': 'Uptimeflare',
-        Authorization: 'Bearer YOUR_TOKEN_HERE',
-      },
-      // [OPTIONAL] body to be sent
-      body: 'Hello, world!',
-      // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
-      responseKeyword: 'success',
-      // [OPTIONAL] if specified, the response must NOT contains the keyword to be considered as operational.
-      responseForbiddenKeyword: 'bad gateway',
-      // [OPTIONAL] if specified, the check will run in your specified region,
-      // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
-      checkLocationWorkerRoute: 'https://xxx.example.com',
+      {
+      id: 'docker_hub',
+      name: 'Docker Hub',
+      method: 'GET',
+      target: 'https://hub.docker.com'
     },
-    // Example TCP Monitor
     {
-      id: 'test_tcp_monitor',
-      name: 'Example TCP Monitor',
-      // `method` should be `TCP_PING` for tcp monitors
-      method: 'TCP_PING',
-      // `target` should be `host:port` for tcp monitors
-      target: '1.2.3.4:22',
-      tooltip: 'My production server SSH',
-      statusPageLink: 'https://example.com',
-      timeout: 5000,
+      id: 'temporary_email_backend',
+      name: '临时邮箱-前端',
+      method: 'GET',
+      target: 'https://mail.412208.xyz'
+    },
+    {
+      id: 'temporary_email_front-end',
+      name: '临时邮箱-后端',
+      method: 'GET',
+      target: 'https://mail-server.412208.xyz'
+    },
+    {
+      id: 'magic1',
+      name: 'Magic1',
+      method: 'GET',
+      target: 'https://m1.412208.xyz'
+    },
+    {
+      id: 'magic2',
+      name: 'Magic2',
+      method: 'GET',
+      target: 'https://m2.412208.xyz'
+    },
+    {
+      id: 'reverse_generation',
+      name: '反代',
+      method: 'GET',
+      target: 'https://proxy.412208.xyz'
+    },
+    {
+      id: 'docker_images',
+      name: 'Docker镜像',
+      method: 'GET',
+      target: 'http://dockerhub.412208.xyz'
+    },
+    {
+      id: 'bing',
+      name: 'Bing',
+      method: 'GET',
+      target: 'https://bing.gedh2011.us.kg'
+    },
+    {
+      id: 'pan',
+      name: 'Onedrive',
+      method: 'GET',
+      target: 'https://onedrive.412208.xyz'
+    },
+    {
+      id: 'pastebin',
+      name: '粘贴板',
+      method: 'GET',
+      target: 'https://paste.412208.xyz'
+    },
+    {
+      id: 'image_bed',
+      name: '图床',
+      method: 'GET',
+      target: 'https://image.412208.xyz'
+    },
+    {
+      id: 'google_drive',
+      name: 'Google Drive Index',
+      method: 'GET',
+      target: 'https://googledrive.412208.xyz'
+    },
+    {
+      id: 'aliyun_drive',
+      name: 'Aliyun Drive Index',
+      method: 'GET',
+      target: 'http://aliyundrive.412208.xyz'
     },
   ],
   notification: {
     // [Optional] apprise API server URL
     // if not specified, no notification will be sent
-    appriseApiServer: "https://apprise.example.com/notify",
+    appriseApiServer: "https://apprise-theta.vercel.app/notify",
     // [Optional] recipient URL for apprise, refer to https://github.com/caronc/apprise
     // if not specified, no notification will be sent
-    recipientUrl: "tgram://bottoken/ChatID",
+    recipientUrl: "tgram://7814519415:AAEQLYkHRt2OZ4V60A674RH7GIqgETEsQLw/7535705783",
     // [Optional] timezone used in notification messages, default to "Etc/GMT"
     timeZone: "Asia/Shanghai",
     // [Optional] grace period in minutes before sending a notification
