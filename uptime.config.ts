@@ -59,12 +59,6 @@ const workerConfig = {
       target: 'http://dockerhub.412208.xyz'
     },
     {
-      id: 'bing',
-      name: 'Bing',
-      method: 'GET',
-      target: 'https://bing.gedh2011.us.kg'
-    },
-    {
       id: 'pan',
       name: 'Onedrive',
       method: 'GET',
