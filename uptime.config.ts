@@ -12,10 +12,7 @@ const pageConfig: PageConfig = {
   // [OPTIONAL] Group your monitors
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
-  group: {
-    '🌐 Public': ['foo_monitor', 'bar_monitor', 'more monitor ids...'],
-    '🔐 Private': ['test_tcp_monitor'],
-  },
+  
 }
 
 const workerConfig: WorkerConfig = {
@@ -111,6 +108,7 @@ const workerConfig: WorkerConfig = {
       method: 'TCP_PING',
       target: '121.40.37.253:22'
     },
+    
   ],
     notification: {
     // [Optional] apprise API server URL
