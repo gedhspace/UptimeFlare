@@ -1,4 +1,6 @@
-const pageConfig = {
+import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
+
+const pageConfig: PageConfig = {
   // Title for your status page 
   title: "Gedh's Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
@@ -7,26 +9,35 @@ const pageConfig = {
     { link: 'https://space.bilibili.com/3494366867884831', label: 'BiliBili' },
     { link: 'mailto:738813115@qq.com', label: 'Email Me', highlight: true },
   ],
+  // [OPTIONAL] Group your monitors
+  // If not specified, all monitors will be shown in a single list
+  // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
+  group: {
+    '🌐 Public': ['foo_monitor', 'bar_monitor', 'more monitor ids...'],
+    '🔐 Private': ['test_tcp_monitor'],
+  },
 }
 
-const workerConfig = {
+const workerConfig: WorkerConfig = {
   // Write KV at most every 3 minutes unless the status changed
   kvWriteCooldownMinutes: 3,
   // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`
   // passwordProtection: 'username:password',
   // Define all your monitors here
   monitors: [
-      {
+    {
       id: 'docker_hub',
       name: 'Docker Hub',
       method: 'GET',
       target: 'https://hub.docker.com'
+      statusPageLink: 'https://hub.docker.com',
     },
     {
       id: 'temporary_email_backend',
       name: '临时邮箱-前端',
       method: 'GET',
       target: 'https://mail.412208.xyz'
+      statusPageLink: 'https://mail.412208.xyz',
     },
     {
       id: 'temporary_email_front-end',
@@ -57,39 +68,51 @@ const workerConfig = {
       name: 'Docker镜像',
       method: 'GET',
       target: 'http://dockerhub.412208.xyz'
+      statusPageLink: 'http://dockerhub.412208.xyz',
     },
     {
       id: 'pan',
       name: 'Onedrive',
       method: 'GET',
       target: 'https://onedrive.412208.xyz'
+      statusPageLink: 'https://onedrive.412208.xyz',
     },
     {
       id: 'pastebin',
       name: '粘贴板',
       method: 'GET',
       target: 'https://paste.412208.xyz'
+      statusPageLink: 'https://paste.412208.xyz',
     },
     {
       id: 'image_bed',
       name: '图床',
       method: 'GET',
       target: 'https://image.412208.xyz'
+      statusPageLink: 'https://image.412208.xyz',
     },
     {
       id: 'google_drive',
       name: 'Google Drive Index',
       method: 'GET',
       target: 'https://googledrive.412208.xyz'
+      statusPageLink: 'https://googledrive.412208.xyz',
     },
     {
       id: 'aliyun_drive',
       name: 'Aliyun Drive Index',
       method: 'GET',
       target: 'http://aliyundrive.412208.xyz'
+      statusPageLink: 'https://aliyundrive.412208.xyz',
+    },
+    {
+      id: 'aliyunserver-hangzhou',
+      name: 'Aliyun ECS-Hangzhou SSH',
+      method: 'TCP_PING',
+      target: '121.40.37.253:22'
     },
   ],
-  notification: {
+    notification: {
     // [Optional] apprise API server URL
     // if not specified, no notification will be sent
     appriseApiServer: "https://apprise-theta.vercel.app/notify",
@@ -114,7 +137,6 @@ const workerConfig = {
     ) => {
       // This callback will be called when there's a status change for any monitor
       // Write any Typescript code here
-
       // This will not follow the grace period settings and will be called immediately when the status changes
       // You need to handle the grace period manually if you want to implement it
     },
@@ -131,5 +153,12 @@ const workerConfig = {
   },
 }
 
+// You can define multiple maintenances here
+// During maintenance, an alert will be shown at status page
+// Also, related downtime notifications will be skipped (if any)
+// Of course, you can leave it empty if you don't need this feature
+// const maintenances: MaintenanceConfig[] = []
+const maintenances: MaintenanceConfig[] = []
+
 // Don't forget this, otherwise compilation fails.
-export { pageConfig, workerConfig }
+export { pageConfig, workerConfig, maintenances }
