@@ -119,7 +119,7 @@ const workerConfig: WorkerConfig = {
     appriseApiServer: "https://apprise-theta.vercel.app/notify",
     // [Optional] recipient URL for apprise, refer to https://github.com/caronc/apprise
     // if not specified, no notification will be sent
-    recipientUrl: "tgram://7814519415:AAEQLYkHRt2OZ4V60A674RH7GIqgETEsQLw/7535705783",
+    recipientUrl: "tgram://8053324442:AAFjprBayuh0aUIIQdHXc_FfJC5XbCzIAow/7535705783",
     // [Optional] timezone used in notification messages, default to "Etc/GMT"
     timeZone: "Asia/Shanghai",
     // [Optional] grace period in minutes before sending a notification
