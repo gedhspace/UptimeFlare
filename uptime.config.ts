@@ -106,7 +106,10 @@ const workerConfig: WorkerConfig = {
       id: 'aliyunserver-hangzhou',
       name: 'Aliyun ECS-Hangzhou SSH',
       method: 'TCP_PING',
-      target: '121.40.37.253:22'
+      target: '121.40.37.253:22',
+      tooltip: 'My production server SSH',
+      statusPageLink: 'https://example.com',
+      timeout: 5000,
     },
     
   ],
