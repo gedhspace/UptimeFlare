@@ -29,14 +29,14 @@ const workerConfig: WorkerConfig = {
       id: 'docker_hub',
       name: 'Docker Hub',
       method: 'GET',
-      target: 'https://hub.docker.com'
+      target: 'https://hub.docker.com',
       statusPageLink: 'https://hub.docker.com',
     },
     {
       id: 'temporary_email_backend',
       name: '临时邮箱-前端',
       method: 'GET',
-      target: 'https://mail.412208.xyz'
+      target: 'https://mail.412208.xyz',
       statusPageLink: 'https://mail.412208.xyz',
     },
     {
@@ -67,42 +67,42 @@ const workerConfig: WorkerConfig = {
       id: 'docker_images',
       name: 'Docker镜像',
       method: 'GET',
-      target: 'http://dockerhub.412208.xyz'
+      target: 'http://dockerhub.412208.xyz',
       statusPageLink: 'http://dockerhub.412208.xyz',
     },
     {
       id: 'pan',
       name: 'Onedrive',
       method: 'GET',
-      target: 'https://onedrive.412208.xyz'
+      target: 'https://onedrive.412208.xyz',
       statusPageLink: 'https://onedrive.412208.xyz',
     },
     {
       id: 'pastebin',
       name: '粘贴板',
       method: 'GET',
-      target: 'https://paste.412208.xyz'
+      target: 'https://paste.412208.xyz',
       statusPageLink: 'https://paste.412208.xyz',
     },
     {
       id: 'image_bed',
       name: '图床',
       method: 'GET',
-      target: 'https://image.412208.xyz'
+      target: 'https://image.412208.xyz',
       statusPageLink: 'https://image.412208.xyz',
     },
     {
       id: 'google_drive',
       name: 'Google Drive Index',
       method: 'GET',
-      target: 'https://googledrive.412208.xyz'
+      target: 'https://googledrive.412208.xyz',
       statusPageLink: 'https://googledrive.412208.xyz',
     },
     {
       id: 'aliyun_drive',
       name: 'Aliyun Drive Index',
       method: 'GET',
-      target: 'http://aliyundrive.412208.xyz'
+      target: 'http://aliyundrive.412208.xyz',
       statusPageLink: 'https://aliyundrive.412208.xyz',
     },
     {
